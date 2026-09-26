@@ -5,7 +5,7 @@ go 1.26
 toolchain go1.26.1
 
 require (
-	github.com/bluesky-social/indigo v0.0.0-20260120225912-12d69fa4d209
+	github.com/bluesky-social/indigo v0.0.0-20260925062619-162dca49278b
 	github.com/cockroachdb/pebble v1.1.2
 	github.com/goccy/go-json v0.10.2
 	github.com/gorilla/websocket v1.5.1
