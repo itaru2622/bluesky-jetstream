@@ -1,19 +1,13 @@
 # Stage 1: Build the Go binary
-FROM golang:1.26.1 AS builder
+FROM golang:1.26 AS builder
 
 # Create a directory for the application
 WORKDIR /app
 
 # Fetch dependencies
-COPY go.mod go.sum ./
+COPY . .
 
-RUN go mod download
-
-COPY pkg ./pkg
-
-COPY cmd/jetstream ./cmd/jetstream
-
-COPY Makefile ./
+RUN go mod tidy
 
 # Build the application
 RUN make build
